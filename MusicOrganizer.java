@@ -81,6 +81,9 @@ public class MusicOrganizer
      */
     public void randomPlayAll()
     {
+        Random rand = new Random();
+        ArrayList<Track> leftToPlay = new ArrayList<Track>(tracks);
+        
         while(leftToPlay.size() > 0) {
             int index = rand.nextInt(leftToPlay.size());
             Track t = leftToPlay.remove(index);
